@@ -1,6 +1,6 @@
 /* --- CONFIGURATION (EDIT THIS) --- */
 const startDate = new Date(2023, 9, 13); // Month is 0-indexed (Sept = 8)
-const phoneNumber = "916305883725"; // Your phone number
+const phoneNumber = "918840844749"; // Your phone number
 
 /* --- ELEMENTS --- */
 const music = document.getElementById("music");
@@ -142,3 +142,4 @@ document.addEventListener("click", (e) => {
 const style = document.createElement("style");
 style.innerHTML = `@keyframes floatUp { to { transform: translateY(-100px); opacity: 0; } }`;
 document.head.appendChild(style);
+
