@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy valentine</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23ff7aa2%22>♥</text></svg>"
+    />
+  </head>
+  <body>
+    <audio id="music" src="sailor.mp3" loop></audio>
+
+    <div id="cursor-heart">♥</div>
+
+    <section id="landing" class="active">
+      <img src="cute.jpg" class="landing-img" alt="Cute Icon" />
+
+      <h1 class="landing-title">For my Baby</h1>
+      <p class="landing-sub">made with love for you</p>
+
+      <div class="envelope" onclick="openEnvelope()">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter">♥</div>
+        <div class="envelope-front"></div>
+      </div>
+
+      <p class="envelope-text">Tap to open</p>
+      <p class="landing-footnote">For you</p>
+    </section>
+
+    <section id="letter">
+      <div class="card">
+        <h2 class="letter-title">My dearest,</h2>
+
+        <div class="letter-text"></div>
+
+        <div id="decision-block">
+          <p class="question">Will you Be my valentine?</p>
+          <div class="decision-buttons">
+            <button onclick="accept()">Yes</button>
+            <button id="noBtn" class="no-button">say Yes !</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="accepted">
+      <div class="heart-container">
+        <svg class="heart-svg" viewBox="0 0 512 512">
+          <defs>
+            <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color: #ff7aa2; stop-opacity: 1" />
+              <stop
+                offset="100%"
+                style="stop-color: #d16ba5; stop-opacity: 1"
+              />
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#heartGrad)"
+            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+          />
+        </svg>
+      </div>
+      <h1>Happy Valentine</h1>
+      <h1>Always you.</h1>
+      <p class="sub">Always us.</p>
+      <h1>I LOVE YOU</h1>
+    </section>
+
+    <section id="gift">
+      <h2>A small gift, across time</h2>
+
+      <div id="timer"><span id="days">00</span> Days Since We Started</div>
+
+      <div class="photos">
+        <div class="photo-frame">
+          <img src="img1.jpeg" alt="Her" />
+          <p>cutie</p>
+        </div>
+        <div class="photo-frame">
+          <img src="img2.jpeg" alt="Us" />
+          <p>Us</p>
+        </div>
+      </div>
+
+      <div class="memory-links">
+        <div class="memory-card" onclick="showSection('memory-first')">
+          <span class="memory-icon">✦</span>
+          <span class="memory-text">The first time I saw you</span>
+        </div>
+        <div class="memory-card" onclick="showSection('memory-fight')">
+          <span class="memory-icon">✦</span>
+          <span class="memory-text">The night we fought</span>
+        </div>
+      </div>
+
+      <button class="whatsapp-btn" onclick="sendWhatsapp()">
+        Tell me you love me too
+      </button>
+    </section>
+
+    <section id="memory-fight">
+      <div class="card">
+        <h2>The night we fought</h2>
+        <p class="memory-p">
+          I hated that night because we were angry. <br /><br />
+          But I loved it because even when we were angry, neither of us left.
+          <br /><br />
+          i am still sorry for hurting you on that day i promise i will never
+          leave you and i love you and only you. Just if such things come I want
+          us to stay together and be strong....not fighting each other.....it's
+          like us against everything not you against me.
+        </p>
+        <button onclick="showSection('gift')">Back</button>
+      </div>
+    </section>
+
+    <section id="memory-first">
+      <div class="card">
+        <h2>The first time I saw you</h2>
+        <p class="memory-p">
+          Well i have said this plenty of times to you, <br /><br />
+          But honestly i can't forget the moment when i first looked into yours
+          eyes<br />
+          your eyes were so beautiful that i got lost in them <br /><br />
+          and in that moment i knew i only want you your voice was like honey
+          but still the eyes.<br />
+          <b>I love you and only you.</b>
+        </p>
+        <button onclick="showSection('gift')">Back</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
